@@ -1,0 +1,51 @@
+﻿.GoodsBlock
+{
+  width:400px;
+  padding: 5px;
+  background-color: #d4f5eb;
+}
+
+.GoodsBlock .ShopName
+{
+  font-weight: bold;
+  color:rgb(182, 64, 172);
+  text-align: center;
+  }
+
+.GoodsBlock .TableGoods
+{
+  font-size: 12px;
+  text-align: center;
+   border-collapse: collapse; 
+   padding-top: 5px;
+   width: 100%;
+   
+}
+.GoodsBlock .TableGoods .TableHeader
+{
+  
+  color: rgb(190, 48, 179);
+}
+.GoodsBlock .TableGoods .Feature {
+  font-size: 12px;
+  border: 2px solid white;
+  padding: 5px;
+ 
+ }
+.GoodsBlock .TableGoods .Icon
+{
+  border: 2px solid white;
+  background-color: white;
+  width:40px;
+  }
+
+.GoodsBlock .TableGoods .ImageGood
+{
+   width: 100%;
+}
+
+
+
+
+
+
