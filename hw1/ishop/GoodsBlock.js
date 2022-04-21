@@ -25,7 +25,8 @@
         let featuresForGoods = [];
         for (let a = 0; a < this.props.features.length; a++) {
             let feature = this.props.features[a];
-            let featureName = React.DOM.td({className: 'Feaucher'}, feature,);
+            let featureName = React.DOM.td({key: a,className: 'Feaucher'}, feature,); //без key React ругается,
+            //  обсуждали, что переменная цикла - не лучший вариант, но в данном случае может быть этого достаточно?
             featuresForGoods.push(featureName);
         }
 
