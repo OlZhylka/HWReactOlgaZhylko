@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Голосование</title>
+</head>
+<body>
+<div id="container"></div>
+
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
+<script src="GoodsBlock.js"></script>
+<link rel="stylesheet" type="text/css" href="GoodsBlock.css"/>
+<script src="GoodOne.js"></script>
+<link rel="stylesheet" type="text/css" href="GoodOne.css"/>
+<script>
+
+    const ispopName = 'Магазинчик утюгов';
+    const tableHead = ["Изображение", "Модель", "Материал подошвы", "На складе, ед.","Контроль"]
+    let ironsArr = [
+        {
+            ironName: 'Normann AIR-209',
+            code: 1,
+            ironMateria: 'тефлон',
+            count: 12,
+            imgUrl: './images/air209_normann.webp'
+        },
+        {
+            ironName: 'Holt HT-IR-010',
+            code: 2,
+            ironMateria: 'керамика',
+            count: 8,
+            imgUrl: './images/htir010_holt.webp'
+        },
+        {
+            ironName: 'Normann AIR-507',
+            code: 3,
+            ironMateria: 'керамика',
+            count: 40,
+            imgUrl: './images/air507_normann.webp'
+        },
+        {
+            ironName: 'Philips GC1741/70',
+            code: 4,
+            ironMateria: 'тефлон',
+            count: 20,
+            imgUrl: './images/gc174170_philips.webp'
+        },
+    ];
+
+    ReactDOM.render(
+        React.createElement(GoodsBlock, {shopName: ispopName, features: tableHead, goods: ironsArr}),
+        document.getElementById('container')
+    );
+
+</script>
+
+</body>
+</html>
+
+
