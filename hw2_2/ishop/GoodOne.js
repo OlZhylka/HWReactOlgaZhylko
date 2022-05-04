@@ -11,13 +11,14 @@
         isSelected: React.PropTypes.bool.isRequired,
     },
     deleteGood: function (ev) {
+        ev.stopPropagation();
         this.props.cbDeleteGood(ev.target.id);
     },
     selectGood: function (ev) {
-        if (ev.target.className != "Delete") {
-            console.log(66);
-            this.props.cbSelectGood(this.props.code);
-        }
+        // if (ev.target.className != "Delete") {
+        //     this.props.cbSelectGood(this.props.code);
+        // }
+        this.props.cbSelectGood(this.props.code)
     },
     render: function () {
         return React.DOM.tr({

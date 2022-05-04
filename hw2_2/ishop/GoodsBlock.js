@@ -25,13 +25,9 @@
         this.setState({
             selectedNowCode: code,
         });
-        let indexForDelete = null;
-        this.state.goods.map((v, index) => {
-            indexForDelete = v['code'] == code ? index : indexForDelete
-        })
-        this.setState(() => {
-            {
-                goods: this.state.goods.splice(indexForDelete, 1)
+        this.setState((state) => {
+            return {
+                goods: state.goods.filter(good => good.code !== +code)
             }
         })
     },
@@ -48,7 +44,7 @@
             let featureName = React.DOM.td({key: a, className: 'Feaucher'}, feature,); //без key React ругается,
             featuresForGoods.push(featureName);
         }
-        let goodsList = this.props.goods.map(v =>
+        let goodsList = this.state.goods.map(v =>
             React.createElement(GoodOne, {
                 key: v.code,
                 imgUrl: v.imgUrl,

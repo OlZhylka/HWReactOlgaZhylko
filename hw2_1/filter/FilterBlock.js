@@ -17,7 +17,7 @@
 
     filters: function () {
         this.setState((state, props) => {
-            console.log(state)
+            // console.log(state)
             // вводим переменную чтобы не повторяться
             let wordsFiltered = props.words.filter(arr => arr.includes(state.freetext));
             return {words: state.radioChecked ? wordsFiltered.slice().sort() : wordsFiltered}
@@ -28,7 +28,8 @@
     radioChanged: function () {
         // нужно получить radioChecked до изменения state
         this.setState((state) => {
-            return {radioChecked: !state.radioChecked} //? наверно в синнтаксисе здесь излишен return?!
+            return {radioChecked: !state.radioChecked} //наверно в синтаксисе здесь излишен return?!
+            //  (по лекции альтернативный и более надёжный вариант использовать вместо !state вариант c eo.target.checked)
         }),
             this.filters()
     },
@@ -61,13 +62,13 @@
             React.DOM.div({className: 'ManageBlock'},
                 // атрибут checked нужен для сброса поля
                 React.DOM.input({
-                    type: "checkbox", defaultChecked: this.state.radioChecked, checked: this.state.radioChecked,
+                    type: "checkbox", checked: this.state.radioChecked,
                     onClick: this.radioChanged
                 }),
                 // атрибут value нужен для сброса поля
                 React.DOM.input({
                     type: "text",
-                    defaultValue: this.state.freetext,
+                    // defaultValue: this.state.freetext,  //это излишнее, React требует что-то одно, дефолт или value
                     value: this.state.freetext,
                     onChange: this.freeTextChanged
                 },),
