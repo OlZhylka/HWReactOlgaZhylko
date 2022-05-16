@@ -1,0 +1,28 @@
+﻿ .Feature {
+  font-size: 12px;
+  border: 2px solid white;
+  padding: 5px;
+ 
+ }
+.Icon
+{
+  border: 2px solid white;
+  background-color: white;
+  width:40px;
+  }
+
+.ImageGood
+{
+   width: 100%;
+}
+
+.Delete{
+    padding: 2px;
+}
+.selectedGood {
+    background-color: gold;
+}
+
+
+
+
