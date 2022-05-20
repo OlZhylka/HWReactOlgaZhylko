@@ -1,8 +1,8 @@
 ﻿import React from 'react';
 import PropTypes from 'prop-types';
-require('./ColorFrame.css');
+require('./RainbowFrame.css');
 
-class ColorFrame extends React.Component {
+class RainbowFrame extends React.Component {
     static propTypes = {
         colors: PropTypes.arrayOf(
             PropTypes.string.isRequired,
@@ -38,4 +38,4 @@ class ColorFrame extends React.Component {
 
 }
 
-export default ColorFrame;
+export default RainbowFrame;
