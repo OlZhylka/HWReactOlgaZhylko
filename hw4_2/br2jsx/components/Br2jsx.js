@@ -6,9 +6,9 @@ require('./Br2jsx.css');
 class Br2jsx extends React.Component {
     static propTypes = {
         text: PropTypes.string.isRequired,
-    };
+            };
     state = {
-        text: this.props.text
+        text: this.props.text,
     }
 
     render() {
@@ -17,7 +17,8 @@ class Br2jsx extends React.Component {
         let arrNew = [];
         arr.forEach((v, i)=>{
             if(i) {
-                arrNew.push(<br/>)
+                let el= <br key={i+"a"}/>;
+                arrNew.push(el)
             }
             arrNew.push(v);
         });
