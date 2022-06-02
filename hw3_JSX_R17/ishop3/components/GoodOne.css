@@ -1,4 +1,4 @@
-﻿ .Feature {
+﻿ .feature {
   font-size: 12px;
   border: 2px solid white;
   padding: 5px;
@@ -16,9 +16,6 @@
    width: 100%;
 }
 
-.Delete{
-    padding: 2px;
-}
 .selectedGood {
     background-color: gold;
 }

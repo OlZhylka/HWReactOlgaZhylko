@@ -1,28 +1,28 @@
 [ {
     "ironName": "Normann AIR-209",
     "code": 1,
-    "ironMateria":"тефлон",
+    "ironMaterial":"тефлон",
     "count": 12,
     "imgUrl": "./images/air209_normann.webp"
 },
 {
     "ironName": "Holt HT-IR-010",
     "code": 2,
-    "ironMateria": "керамика",
+    "ironMaterial": "керамика",
     "count": 8,
     "imgUrl": "./images/htir010_holt.webp"
 },
 {
     "ironName": "Normann AIR-507",
     "code": 3,
-    "ironMateria": "керамика",
+    "ironMaterial": "керамика",
     "count": 40,
     "imgUrl": "./images/air507_normann.webp"
 },
 {
     "ironName": "Philips GC1741/70",
     "code": 4,
-    "ironMateria": "тефлон",
+    "ironMaterial": "тефлон",
     "count": 20,
     "imgUrl": "./images/gc174170_philips.webp"
 }

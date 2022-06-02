@@ -6,14 +6,14 @@ import GoodsBlock from './components/GoodsBlock';
 
 
 let ispopName='Магазинчик утюгов';
-let tableHead=["Изображение", "Модель", "Материал подошвы", "На складе, ед.","Контроль"];
+let tableHead=["Изображение", "Модель", "Материал подошвы", "На складе, ед.","Карточка","Удалить"];
 let ironsArr=require('./irons.json');
 
 ReactDOM.render(
-    <GoodsBlock  
-    shopName={ispopName} 
-    features={tableHead}
-    goods={ironsArr} 
+    <GoodsBlock
+        shopName={ispopName}
+        features={tableHead}
+        goods={ironsArr}
     />
   , document.getElementById('container') 
 );
