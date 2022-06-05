@@ -1,0 +1,22 @@
+﻿.MobileClient
+{
+  font-size: 14px;
+  padding: 8px;
+}
+
+
+.rowTable {
+   border-bottom: mediumblue 2px solid;
+}
+
+.MobileClientBalance {
+  font-weight: bold;
+
+}
+.Active {
+  background-color: aqua;
+}
+.Blocked {
+  background-color: #ef104f;
+}
+
