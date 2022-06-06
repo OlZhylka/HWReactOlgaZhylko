@@ -75,18 +75,6 @@ class FormNewClient extends React.Component {
     }
 
 
-    changeForm = (ev) => {
-        ev.preventDefault()
-        const target = ev.target;
-        const value = target.value;
-        const name = target.name;
-        this.setState(prevState => ({
-            client: {                   // object that we want to update
-                ...prevState.client,    // keep all other key-value pairs
-                [name]: value       // update the value of specific key
-            }
-        }))
-    }
     cancelFormChanges = (ev) => {
         ev.stopPropagation();
         clientsEvents.emit(EvCancelClicked);
@@ -105,21 +93,21 @@ class FormNewClient extends React.Component {
                 <h4>Клиент: {this.state.client.id}</h4>
                 <form>
                     {formForCard[0]}<input id={0 + "lbl"} name={"fam"} type={"text"}
-                                           value={this.state.client.fam ? this.state.client.fam : ""}
+                                           defaultValue={this.state.client.fam ? this.state.client.fam : ""}
                                            ref={this.setRef}
-                                           onChange={this.changeForm}/>
+                    />
                     {formForCard[1]}<input id={1 + "lbl"} name={"im"} type={"text"}
-                                           value={this.state.client.im ? this.state.client.im : ""}
+                                           defaultValue={this.state.client.im ? this.state.client.im : ""}
                                            ref={this.setRef}
-                                           onChange={this.changeForm}/>
+                                           />
                     {formForCard[2]}<input id={2 + "lbl"} name={"otch"} type={"text"}
-                                           value={this.state.client.otch ? this.state.client.otch : ""}
+                                           defaultValue={this.state.client.otch ? this.state.client.otch : ""}
                                            ref={this.setRef}
-                                           onChange={this.changeForm}/>
+                                          />
                     {formForCard[3]}<input id={3 + "lbl"} name={"balance"} type={"text"}
-                                           value={this.state.client.balance ? this.state.client.balance : ""}
+                                           defaultValue={this.state.client.balance ? this.state.client.balance : ""}
                                            ref={this.setRef}
-                                           onChange={this.changeForm}/>
+                                           />
 
                 </form>
                 {(this.state.flagFormForEdit &&

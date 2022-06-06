@@ -50,12 +50,11 @@ class MobileCompany extends React.PureComponent {
     setName2 = () => {
         this.setState({name: 'Velcom'});
     };
-///ПОдумать, видимо нужен редакс
+
     showActive = () => {
         this.flagBlocked=0
         this.flagActive=1
         this.filterClients();
-        // this.setState({name: 'Velcom'});
     };
 
     showBlocked = () => {
